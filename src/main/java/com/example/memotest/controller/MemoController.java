@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MemoController {
     private final MemoRepository memoRepository;
 
-    @GetMapping
+    @GetMapping("/")
     public String getMemo(Model model) {
         model.addAttribute("memo", memoRepository.findAll());
         return "index";
